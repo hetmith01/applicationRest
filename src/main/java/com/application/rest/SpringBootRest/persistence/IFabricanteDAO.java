@@ -5,7 +5,7 @@ import com.application.rest.SpringBootRest.entities.Fabricante;
 import java.util.List;
 import java.util.Optional;
 
-public interface IFrabricanteDAO {
+public interface IFabricanteDAO {
 
     List<Fabricante> findAll();
 
