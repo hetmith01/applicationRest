@@ -3,6 +3,7 @@ package com.application.rest.SpringBootRest.service.impl;
 import com.application.rest.SpringBootRest.entities.Fabricante;
 import com.application.rest.SpringBootRest.persistence.IFabricanteDAO;
 import com.application.rest.SpringBootRest.service.IFabricanteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Service
 public class FabricanteServiceImpl implements IFabricanteService {
 
+    @Autowired
     private IFabricanteDAO fabricanteDAO;
 
     @Override

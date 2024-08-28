@@ -1,6 +1,7 @@
 package com.application.rest.SpringBootRest.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -22,5 +23,6 @@ public class Fabricante {
     private String nombre;
 
     @OneToMany(mappedBy = "fabricante", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonIgnore
     private List<Producto> productoList = new ArrayList<>();
 }

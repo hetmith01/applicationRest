@@ -1,6 +1,7 @@
 package com.application.rest.SpringBootRest.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,5 +27,6 @@ public class Producto {
 
     @ManyToOne
     @JoinColumn(name = "fabricante_id", nullable = false)
+    @JsonIgnore
     private Fabricante fabricante;
 }
